@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import ring1Image from "../../assets/borel-products/ring1.png";
+import batmanWatchBoxImage from "../../assets/borel-products/batmanwatch w box1.png";
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -152,10 +153,26 @@ export default function HomePage() {
                 />
               </article>
               <article
-                className="work-rect work-rect-interactive"
+                className="work-rect work-rect-filled work-rect-interactive"
                 aria-label="Work placeholder"
-                onClick={() => setActiveWorkVideo("/assets/borel-products/ring1.mp4")}
-              />
+                onClick={() => setActiveWorkVideo("/assets/borel-products/batmanwatch1.mp4")}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setActiveWorkVideo("/assets/borel-products/batmanwatch1.mp4");
+                  }
+                }}
+              >
+                <Image
+                  src={batmanWatchBoxImage}
+                  alt="Batman watch concept visual"
+                  fill
+                  className="work-rect-image"
+                  sizes="(max-width: 900px) 100vw, 33vw"
+                />
+              </article>
               <article
                 className="work-rect work-rect-interactive"
                 aria-label="Work placeholder"
@@ -305,8 +322,8 @@ export default function HomePage() {
         <div className="container footer-wrap">
           <p>&copy; {year} Borel Creative Services</p>
           <div className="footer-links">
-            <a className="footer-email-link" href="mailto:skywqlk@borelcreativeservices.com">
-              skywqlk@borelcreativeservices.com
+            <a className="footer-email-link" href="mailto:josh.ngu101@gmail.com">
+              josh.ngu101@gmail.com
             </a>
             <a href="#top">Back to top</a>
           </div>

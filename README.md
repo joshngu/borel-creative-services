@@ -23,7 +23,7 @@ Bold, portfolio-first one-page site for Borel Creative Services.
 
 ## Edit Before Launch
 1. Replace sample portfolio metrics with your real client outcomes.
-2. Update contact email in footer (`skywqlk@borelcreativeservices.com`).
+2. Update contact email in footer (`josh.ngu101@gmail.com`).
 3. Add social links in footer if needed.
 4. Replace the form endpoint in `index.html`:
    - `action="https://formspree.io/f/your-form-id"`
