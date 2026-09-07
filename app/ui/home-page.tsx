@@ -339,6 +339,12 @@ export default function HomePage() {
         <div className="container footer-wrap">
           <p>&copy; {year} Borel Creative Services</p>
           <div className="footer-links">
+            <a
+              className="footer-email-link"
+              href="mailto:joshuanguyen@borelcreativeservice.com"
+            >
+              joshuanguyen@borelcreativeservice.com
+            </a>
             <a href="#top">Back to top</a>
           </div>
         </div>
