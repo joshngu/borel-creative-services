@@ -620,7 +620,7 @@ h2 {
 
 
 #services.section {
-  background: linear-gradient(180deg, #f6e78e 0%, #efd87a 100%);
+  background: linear-gradient(180deg, #fff2a8 0%, #faeb9a 100%);
 }
 
 #founders.section {
@@ -628,11 +628,7 @@ h2 {
 }
 
 #contact.section {
-  background: linear-gradient(180deg, #ecd97d 0%, #dfc35a 100%);
-}
-
-#contact.curtain-section {
-  min-height: 50svh;
+  background: linear-gradient(180deg, #f6e78e 0%, #efd87a 100%);
 }
 
 .section-head {
@@ -720,10 +716,40 @@ h2 {
   font-size: clamp(1rem, 2.2vw, 1.2rem);
 }
 
+.services-headline {
+  margin: 0 0 0.9rem;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.25;
+  max-width: 24ch;
+  color: var(--surface-contrast);
+}
+
 .services-intro {
   margin: 0 0 1.25rem;
   max-width: 46ch;
   color: var(--surface-contrast);
+}
+
+.services-note {
+  max-width: 46ch;
+  color: var(--surface-contrast);
+  border-top: 1px solid rgb(95 84 35 / 24%);
+  padding-top: 1rem;
+}
+
+.services-note p {
+  margin: 0 0 0.7rem;
+}
+
+.services-note-title {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.services-note-highlight {
+  margin-bottom: 0;
+  color: var(--text);
 }
 
 .services-bullets {
@@ -762,7 +788,7 @@ h2 {
   border-top: 1px solid rgb(95 84 35 / 35%);
 }
 
-.process-list li {
+.process-list > li {
   padding: 0;
   border-bottom: 1px solid rgb(95 84 35 / 24%);
 }
@@ -800,6 +826,38 @@ h2 {
   width: 100%;
   color: var(--surface-contrast);
   line-height: 1.35;
+}
+
+.service-summary {
+  margin: 0 0 0.85rem;
+  max-width: 62ch;
+}
+
+.service-feature-list {
+  margin: 0 0 0.85rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.32rem;
+}
+
+.service-feature-list li {
+  position: relative;
+  padding-left: 1.35rem;
+}
+
+.service-feature-list li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.service-price {
+  margin: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
 }
 
 .contact-line {
@@ -864,7 +922,7 @@ h2 {
   gap: 0.8rem;
   background: linear-gradient(165deg, rgb(255 255 255 / 2%), rgb(255 255 255 / 1%));
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 0;
   padding: 1rem;
 }
 
@@ -874,23 +932,58 @@ h2 {
   font-weight: 600;
 }
 
-input,
-select,
-textarea {
+.lead-form input,
+.lead-form select,
+.lead-form textarea,
+.lead-form .btn {
   width: 100%;
-  border-radius: 12px;
+  min-height: 2.75rem;
+  box-sizing: border-box;
+  border-radius: 0;
   border: 1px solid var(--border);
   background: #fff9d5;
   color: var(--text);
   padding: 0.65rem 0.75rem;
   font: inherit;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  appearance: none;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+.lead-form select {
+  background-image: linear-gradient(45deg, transparent 50%, var(--text) 50%),
+    linear-gradient(135deg, var(--text) 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 3px), calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+}
+
+.lead-form textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+}
+
+.lead-form .btn {
+  margin-top: 0.15rem;
+  cursor: pointer;
+  background: #fff9d5;
+}
+
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus,
+.lead-form .btn:focus {
   outline: 2px solid var(--ring);
   outline-offset: 1px;
+}
+
+.lead-form .btn:hover {
+  transform: none;
+  box-shadow: none;
+  filter: none;
+  background: #fff6c4;
 }
 
 .form-note {
