@@ -860,6 +860,26 @@ h2 {
   color: var(--text);
 }
 
+.service-demo-link {
+  display: inline-block;
+  margin: 0.85rem 0 0;
+  padding: 0 0 0 1.35rem;
+  border: none;
+  background: none;
+  color: var(--surface-contrast);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+.service-demo-link::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
 .contact-line {
   font-size: clamp(1rem, 2.2vw, 1.2rem);
   color: var(--surface-contrast);

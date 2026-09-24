@@ -97,11 +97,12 @@ export default function HomePage() {
               Services
             </a>
             <a
-              href="#contact"
-              className={activeId === "contact" ? "active" : undefined}
+              href="https://calendar.app.google/BY7Ee6NkvKMk76Bd6"
+              target="_blank"
+              rel="noreferrer"
               onClick={handleNavLinkClick}
             >
-              Contact Us
+              Book a meeting
             </a>
           </nav>
         </div>
@@ -202,6 +203,9 @@ export default function HomePage() {
                         <p className="service-price">
                           Custom pricing based on business needs
                         </p>
+                        <button type="button" className="service-demo-link">
+                          See a demo
+                        </button>
                       </div>
                     </details>
                   </li>
