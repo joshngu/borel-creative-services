@@ -143,40 +143,41 @@ export default function HomePage() {
                   Technology that helps local businesses get more customers.
                 </h2>
                 <p className="services-intro">
-                  We help restaurants and small businesses build a stronger online
-                  presence, automate everyday tasks, and make it easier for customers to
-                  find, contact, and order from them.
+                  Clients buy an outcome: more leads, more booked appointments, faster
+                  replies, and less work for staff. We package websites, marketing, and
+                  automation into three tiers.
                 </p>
                 <div className="services-note">
-                  <p className="services-note-title">Built around your business</p>
+                  <p className="services-note-title">Three ways to start</p>
                   <p>
-                    Every business is different. Instead of forcing you into a
-                    one-size-fits-all package, we identify where technology can have the
-                    biggest impact and build a solution around your needs.
+                    Launch builds the online presence. Growth brings in leads and follows
+                    up. Scale answers and books those leads automatically.
                   </p>
                   <p className="services-note-highlight">
-                    More visibility. More automation. More opportunities to turn visitors
-                    into customers.
+                    More leads. More booked appointments. Faster replies.
                   </p>
                 </div>
               </div>
               <div className="services-process">
-                <p className="services-process-title">What we offer</p>
+                <p className="services-process-title">Packages</p>
                 <ol className="process-list">
                   <li>
                     <details className="process-item">
-                      <summary className="process-step-name">Custom Websites</summary>
+                      <summary className="process-step-name">Launch</summary>
                       <div className="process-step-detail">
                         <p className="service-summary">
-                          A professional website built specifically for your business.
+                          For new or small local businesses. Establish a credible online
+                          presence and capture leads.
                         </p>
                         <ul className="service-feature-list">
-                          <li>Custom-designed business websites</li>
+                          <li>Conversion-focused website</li>
                           <li>Mobile-friendly design</li>
                           <li>Menu and service pages</li>
+                          <li>Contact and quote forms</li>
                           <li>Online ordering integration</li>
-                          <li>Contact forms and calls-to-action</li>
                           <li>Google-friendly structure</li>
+                          <li>Google Business Profile setup or optimization</li>
+                          <li>Basic analytics</li>
                           <li>Hosting and ongoing updates available</li>
                         </ul>
                         <p className="service-price">Starting at $2,500</p>
@@ -185,48 +186,21 @@ export default function HomePage() {
                   </li>
                   <li>
                     <details className="process-item">
-                      <summary className="process-step-name">AI Receptionist</summary>
+                      <summary className="process-step-name">Growth</summary>
                       <div className="process-step-detail">
                         <p className="service-summary">
-                          Never miss a customer because you were too busy to answer the
-                          phone. Our AI receptionist handles common calls and questions
-                          automatically, so your staff can focus on serving customers.
+                          For businesses that need a predictable flow of leads. Generate
+                          and follow up with more qualified prospects.
                         </p>
                         <ul className="service-feature-list">
-                          <li>Answers common questions</li>
-                          <li>Provides business information</li>
-                          <li>Handles frequently asked questions</li>
-                          <li>Helps customers outside busy hours</li>
-                          <li>Reduces repetitive phone calls</li>
-                          <li>Available around the clock</li>
-                        </ul>
-                        <p className="service-price">
-                          Custom pricing based on business needs
-                        </p>
-                        <button type="button" className="service-demo-link">
-                          See a demo
-                        </button>
-                      </div>
-                    </details>
-                  </li>
-                  <li>
-                    <details className="process-item">
-                      <summary className="process-step-name">
-                        Online Growth &amp; Marketing
-                      </summary>
-                      <div className="process-step-detail">
-                        <p className="service-summary">
-                          Turn your online presence into a tool for attracting new
-                          customers. We improve how your business presents itself online
-                          and create content designed to drive customers through the door.
-                        </p>
-                        <ul className="service-feature-list">
+                          <li>Everything in Launch</li>
                           <li>Short-form social media content</li>
-                          <li>Promotional content</li>
-                          <li>Product and food showcases</li>
-                          <li>Social media optimization</li>
+                          <li>Promotional content and product showcases</li>
+                          <li>Paid-ad campaign setup and management</li>
                           <li>Local marketing strategies</li>
-                          <li>Online presence improvements</li>
+                          <li>Lead tracking</li>
+                          <li>Automated email and text follow-up</li>
+                          <li>Monthly reporting</li>
                         </ul>
                         <p className="service-price">Custom pricing</p>
                       </div>
@@ -234,24 +208,28 @@ export default function HomePage() {
                   </li>
                   <li>
                     <details className="process-item">
-                      <summary className="process-step-name">Business Automation</summary>
+                      <summary className="process-step-name">Scale</summary>
                       <div className="process-step-detail">
                         <p className="service-summary">
-                          Spend less time on repetitive work. We use modern software and AI
-                          tools to automate processes that would otherwise take hours of
-                          manual work.
+                          For businesses losing leads because replies are slow or manual.
+                          Turn leads into booked calls or appointments automatically.
                         </p>
                         <ul className="service-feature-list">
+                          <li>Everything in Growth</li>
+                          <li>AI receptionist for calls and common questions</li>
+                          <li>Help for customers outside busy hours</li>
+                          <li>Appointment booking</li>
+                          <li>CRM pipeline setup</li>
                           <li>Customer communication workflows</li>
-                          <li>Data organization</li>
-                          <li>Repetitive administrative tasks</li>
-                          <li>AI-powered workflows</li>
-                          <li>Custom business automations</li>
-                          <li>Integrations between existing tools</li>
+                          <li>AI-powered workflows and tool integrations</li>
+                          <li>Ongoing optimization</li>
                         </ul>
                         <p className="service-price">
-                          Custom pricing based on the project
+                          Custom pricing based on business needs
                         </p>
+                        <button type="button" className="service-demo-link">
+                          See a demo
+                        </button>
                       </div>
                     </details>
                   </li>
@@ -300,14 +278,11 @@ export default function HomePage() {
                   Interested in
                   <select name="interest" required defaultValue="">
                     <option value="" disabled>
-                      Select a service
+                      Select a package
                     </option>
-                    <option value="Custom Websites">Custom Websites</option>
-                    <option value="AI Receptionist">AI Receptionist</option>
-                    <option value="Online Growth & Marketing">
-                      Online Growth &amp; Marketing
-                    </option>
-                    <option value="Business Automation">Business Automation</option>
+                    <option value="Launch">Launch</option>
+                    <option value="Growth">Growth</option>
+                    <option value="Scale">Scale</option>
                     <option value="Not sure yet">Not sure yet</option>
                   </select>
                 </label>
