@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent, type MouseEvent } from "react";
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
   const year = new Date().getFullYear();
+  const releaseNavScroll = useRef<(() => void) | null>(null);
 
   useEffect(() => {
     const markActiveLink = () => {
@@ -41,8 +42,63 @@ export default function HomePage() {
     };
   }, []);
 
-  const handleNavLinkClick = () => {
+  const handleNavLinkClick = (event: MouseEvent<HTMLAnchorElement>) => {
     setIsMenuOpen(false);
+
+    const href = event.currentTarget.getAttribute("href");
+    if (!href?.startsWith("#")) return;
+
+    const target = document.querySelector<HTMLElement>(href);
+    if (!target) return;
+
+    event.preventDefault();
+    releaseNavScroll.current?.();
+
+    const sections = Array.from(document.querySelectorAll<HTMLElement>("main .curtain-section"));
+    const index = sections.indexOf(target);
+    const later = index >= 0 ? sections.slice(index + 1) : [];
+    later.forEach((section) => {
+      section.style.position = "relative";
+    });
+
+    const previousPosition = target.style.position;
+    target.style.position = "relative";
+    const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY);
+    target.style.position = previousPosition;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let settled = false;
+    let timeoutId = 0;
+
+    const restore = () => {
+      if (settled) return;
+      settled = true;
+      window.clearTimeout(timeoutId);
+      window.removeEventListener("scroll", restoreWhenSettled);
+      window.removeEventListener("scrollend", restore);
+      later.forEach((section) => {
+        section.style.position = "";
+      });
+      if (releaseNavScroll.current === restore) {
+        releaseNavScroll.current = null;
+      }
+    };
+
+    const restoreWhenSettled = () => {
+      if (Math.abs(window.scrollY - top) < 4) restore();
+    };
+
+    releaseNavScroll.current = restore;
+    window.scrollTo({ top, behavior: reduceMotion ? "auto" : "smooth" });
+
+    if (reduceMotion || Math.abs(window.scrollY - top) < 2) {
+      restore();
+      return;
+    }
+
+    window.addEventListener("scroll", restoreWhenSettled, { passive: true });
+    window.addEventListener("scrollend", restore);
+    timeoutId = window.setTimeout(restore, 4000);
   };
 
   const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -104,6 +160,13 @@ export default function HomePage() {
               Services
             </a>
             <a
+              href="#contact"
+              className={activeId === "contact" ? "active" : undefined}
+              onClick={handleNavLinkClick}
+            >
+              Contact
+            </a>
+            <a
               href="https://calendar.app.google/BY7Ee6NkvKMk76Bd6"
               target="_blank"
               rel="noreferrer"
@@ -133,6 +196,14 @@ export default function HomePage() {
                     Local businesses get more leads, more bookings, and faster replies.
                   </span>
                 </h1>
+                <a
+                  className="hero-meeting"
+                  href="https://calendar.app.google/BY7Ee6NkvKMk76Bd6"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Book a meeting
+                </a>
               </div>
             </div>
           </div>
