@@ -459,6 +459,13 @@ h1 {
   background: #fff6c4;
 }
 
+.hero-meeting-note {
+  margin: 0.75rem auto 0;
+  max-width: 36ch;
+  text-align: center;
+  color: var(--surface-contrast);
+}
+
 h2 {
   font-size: clamp(1.6rem, 3vw, 2.35rem);
   font-weight: 400;
@@ -788,6 +795,50 @@ h2 {
 .services-note-highlight {
   margin-bottom: 0;
   color: var(--text);
+}
+
+.how-steps {
+  margin: 0 0 0.7rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.how-steps li {
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.how-steps li::before {
+  counter-increment: step;
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+}
+
+.work-job-place {
+  margin: -0.35rem 0 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--surface-contrast);
+}
+
+.work-case {
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.work-case dt {
+  margin: 0 0 0.2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.work-case dd {
+  margin: 0;
 }
 
 .services-bullets {

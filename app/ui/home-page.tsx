@@ -204,6 +204,9 @@ export default function HomePage() {
                 >
                   Book a meeting
                 </a>
+                <p className="hero-meeting-note">
+                  A short look at how customers find you, contact you, and book.
+                </p>
               </div>
             </div>
           </div>
@@ -230,10 +233,30 @@ export default function HomePage() {
               </a>
               <div>
                 <h2 className="services-headline">Phở Duy</h2>
-                <p className="services-intro">
-                  A website for a Vietnamese noodle house in Houston, with the menu,
-                  hours, location, and a way to call.
-                </p>
+                <p className="work-job-place">Houston</p>
+                <dl className="work-case">
+                  <div>
+                    <dt>Problem</dt>
+                    <dd>
+                      Menu, hours, location, and a way to call were not together on one
+                      site.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>What we built</dt>
+                    <dd>
+                      A mobile-friendly website with the menu, food photos, hours,
+                      location, a map link, and click-to-call.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Result</dt>
+                    <dd>
+                      Customers can find the menu, hours, location, and phone number in
+                      one place.
+                    </dd>
+                  </div>
+                </dl>
                 <a
                   className="work-job-link"
                   href="https://www.phoduy.net/"
@@ -264,11 +287,12 @@ export default function HomePage() {
                   into three tiers.
                 </p>
                 <div className="services-note">
-                  <p className="services-note-title">Three ways to start</p>
-                  <p>
-                    Launch builds the online presence. Growth brings in leads and follows
-                    up. Scale answers and books those leads automatically.
-                  </p>
+                  <p className="services-note-title">How it works</p>
+                  <ol className="how-steps">
+                    <li>We look at the business.</li>
+                    <li>We find what is being missed.</li>
+                    <li>We build the solution.</li>
+                  </ol>
                   <p className="services-note-highlight">
                     More leads. More booked appointments. Faster replies.
                   </p>
@@ -282,8 +306,8 @@ export default function HomePage() {
                       <summary className="process-step-name">Launch</summary>
                       <div className="process-step-detail">
                         <p className="service-summary">
-                          For new or small local businesses. Establish a credible online
-                          presence and capture leads.
+                          Get found online. For a new or small local business that needs
+                          a credible place for customers to land.
                         </p>
                         <ul className="service-feature-list">
                           <li>Conversion-focused website</li>
@@ -305,18 +329,18 @@ export default function HomePage() {
                       <summary className="process-step-name">Growth</summary>
                       <div className="process-step-detail">
                         <p className="service-summary">
-                          For businesses that need a predictable flow of leads. Generate
-                          and follow up with more qualified prospects.
+                          Bring in more customers. For a business that needs a steadier
+                          flow of leads, and follow-up after they inquire.
                         </p>
                         <ul className="service-feature-list">
                           <li>Everything in Launch</li>
                           <li>Short-form social media content</li>
                           <li>Promotional content and product showcases</li>
-                          <li>Paid-ad campaign setup and management</li>
-                          <li>Local marketing strategies</li>
-                          <li>Lead tracking</li>
-                          <li>Automated email and text follow-up</li>
-                          <li>Monthly reporting</li>
+                          <li>Paid ads that send people to your site</li>
+                          <li>Local marketing</li>
+                          <li>A way to see which inquiries become customers</li>
+                          <li>Email and text follow-up</li>
+                          <li>A monthly report</li>
                         </ul>
                         <p className="service-price">Custom pricing</p>
                       </div>
@@ -327,18 +351,18 @@ export default function HomePage() {
                       <summary className="process-step-name">Scale</summary>
                       <div className="process-step-detail">
                         <p className="service-summary">
-                          For businesses losing leads because replies are slow or manual.
-                          Turn leads into booked calls or appointments automatically.
+                          Stop missing calls and leads. For a business that loses
+                          customers when the phone is busy or nobody follows up.
                         </p>
                         <ul className="service-feature-list">
                           <li>Everything in Growth</li>
-                          <li>AI receptionist for calls and common questions</li>
-                          <li>Help for customers outside busy hours</li>
+                          <li>An AI receptionist for common questions</li>
+                          <li>Answers outside busy hours</li>
                           <li>Appointment booking</li>
-                          <li>CRM pipeline setup</li>
-                          <li>Customer communication workflows</li>
-                          <li>AI-powered workflows and tool integrations</li>
-                          <li>Ongoing optimization</li>
+                          <li>A simple list of leads so none get lost</li>
+                          <li>Follow-up that goes out without extra staff time</li>
+                          <li>Your current tools connected, so work is not retyped</li>
+                          <li>We keep improving what is working</li>
                         </ul>
                         <p className="service-price">
                           Custom pricing based on business needs
@@ -360,6 +384,10 @@ export default function HomePage() {
             <div className="contact-wrap">
               <div className="contact-copy">
                 <h2 className="services-headline">Tell us what your business needs.</h2>
+                <p className="services-intro">
+                  Borel works directly with local owners. You get a recommendation for
+                  your business, not a software package to figure out alone.
+                </p>
                 <p className="services-intro">
                   Share a few details and we will follow up with the fastest way to help
                   customers find you, reach you, and buy from you.
