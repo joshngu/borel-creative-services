@@ -4,7 +4,7 @@ import "../styles.css";
 export const metadata: Metadata = {
   title: "Borel Creative Services | AI Agency for Small businesses",
   description:
-    "Borel Creative Services helps brands scale with AI-powered ad strategy, content creation, and brand activation.",
+    "Borel Creative Services helps local businesses get more leads, more bookings, and faster replies.",
 };
 
 export default function RootLayout({

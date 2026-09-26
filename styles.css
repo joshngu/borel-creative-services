@@ -414,7 +414,7 @@ h1 {
   font-family: "Courier New", Courier, monospace;
   text-transform: none;
   color: var(--surface-contrast);
-  max-width: 28ch;
+  max-width: 36ch;
 }
 
 .hero-content {
@@ -860,20 +860,31 @@ h2 {
   color: var(--text);
 }
 
-.service-demo-link {
-  display: inline-block;
-  margin: 0.85rem 0 0;
-  padding: 0 0 0 1.35rem;
-  border: none;
-  background: none;
-  color: var(--surface-contrast);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
+.work-job {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  align-items: center;
 }
 
-.service-demo-link::before {
+.work-job-media {
+  display: block;
+}
+
+.work-job-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-job-link {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--surface-contrast);
+}
+
+.work-job-link::before {
   content: "\2192";
   position: absolute;
   left: 0;
@@ -1049,6 +1060,7 @@ h2 {
 
   .hero-bg-video video {
     opacity: 0.56;
+    object-position: center 72%;
   }
 
   .curtain-section {
@@ -1058,12 +1070,18 @@ h2 {
     display: block;
   }
 
+  .hero.curtain-section {
+    min-height: 100svh;
+    display: flex;
+  }
+
   .hero-grid,
   .contact-wrap {
     grid-template-columns: 1fr;
   }
 
-  .services-layout {
+  .services-layout,
+  .work-job {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }

@@ -90,6 +90,13 @@ export default function HomePage() {
             aria-label="Main navigation"
           >
             <a
+              href="#work"
+              className={activeId === "work" ? "active" : undefined}
+              onClick={handleNavLinkClick}
+            >
+              Work
+            </a>
+            <a
               href="#services"
               className={activeId === "services" ? "active" : undefined}
               onClick={handleNavLinkClick}
@@ -123,8 +130,7 @@ export default function HomePage() {
                 <h1>
                   <span className="hero-lead">BOREL CREATIVE SERVICES</span>
                   <span className="hero-tail">
-                    Is a collective of creative minds hammering out ideas, one story at a
-                    time.
+                    Local businesses get more leads, more bookings, and faster replies.
                   </span>
                 </h1>
               </div>
@@ -132,7 +138,45 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="services" className="section curtain-section">
+        <section id="work" className="section curtain-section">
+          <div className="container">
+            <div className="section-head">
+              <p className="eyebrow">Work</p>
+            </div>
+            <article className="work-job">
+              <a
+                className="work-job-media"
+                href="https://www.phoduy.net/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src="/assets/phoduy-storefront.jpg"
+                  alt="Phở Duy Vietnamese noodle house in Houston"
+                  width={1280}
+                  height={858}
+                />
+              </a>
+              <div>
+                <h2 className="services-headline">Phở Duy</h2>
+                <p className="services-intro">
+                  A website for a Vietnamese noodle house in Houston, with the menu,
+                  hours, location, and a way to call.
+                </p>
+                <a
+                  className="work-job-link"
+                  href="https://www.phoduy.net/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit the site
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="services" className="section section-alt curtain-section">
           <div className="container">
             <div className="section-head">
               <p className="eyebrow">Services</p>
@@ -144,8 +188,9 @@ export default function HomePage() {
                 </h2>
                 <p className="services-intro">
                   Clients buy an outcome: more leads, more booked appointments, faster
-                  replies, and less work for staff. We package websites, marketing, and
-                  automation into three tiers.
+                  replies, and less work for staff. We work with local businesses,
+                  including restaurants, and package websites, marketing, and automation
+                  into three tiers.
                 </p>
                 <div className="services-note">
                   <p className="services-note-title">Three ways to start</p>
@@ -172,9 +217,9 @@ export default function HomePage() {
                         <ul className="service-feature-list">
                           <li>Conversion-focused website</li>
                           <li>Mobile-friendly design</li>
-                          <li>Menu and service pages</li>
+                          <li>Service pages</li>
                           <li>Contact and quote forms</li>
-                          <li>Online ordering integration</li>
+                          <li>Online ordering or booking</li>
                           <li>Google-friendly structure</li>
                           <li>Google Business Profile setup or optimization</li>
                           <li>Basic analytics</li>
@@ -227,9 +272,6 @@ export default function HomePage() {
                         <p className="service-price">
                           Custom pricing based on business needs
                         </p>
-                        <button type="button" className="service-demo-link">
-                          See a demo
-                        </button>
                       </div>
                     </details>
                   </li>
